@@ -25,7 +25,7 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 .image-container {
-    margin-top: 3.25em;
+    
     align-self: center;
     border-radius: 15%;
 }
@@ -86,6 +86,7 @@ width: 50px;
       justify-content: center;
       align-items: center;
       background-image: url('/boots.jpg');
+      background-attachment: fixed;
       background-size: cover;
   }
 .hero-back{
@@ -99,27 +100,45 @@ width: 50px;
       flex-direction: column;
       text-align: center;   
       background: rgb(20, 20, 20);
+      padding: 2em;
     /* border: cadetblue; */
-      border: 1px solid black;
+      border: 1px solid wheat;
+
 }
 button{
     font-size: 15;
-    border-radius: 15% !important;
+    border-radius: 3px !important;
     background: orange;
     margin: 1em 12em;
+    outline: none;
+    border: 2px solid transparent;
     padding: 0.5em;
+    cursor: pointer;
+    color:initial;
+    transition: all .2s ease-in;
 }
 
 button:hover {
-    filter: brightness(80%);
-    border-color: black;
+    background: transparent;
+    border:2px solid orange;
+    color: wheat;
 }
 .row {
     display: flex;
     padding: 2em 2em; 
     width: 60%;
+    flex-direction: column;
     
     justify-content: center;
+}
+.inner-container {
+    display: flex;
+    justify-content: center;
+}
+.inner-container2{
+    display:flex;
+    justify-content: center;
+    
 }
 
 .first {
@@ -132,10 +151,11 @@ button:hover {
 
 .content {
     width: 40%;
-    padding: 0 3em 0 0;
+    padding: 1em;
 }
 .container{
-    background-image: url(mountains.jpg) ;
+    background-image: url(mountains.jpg);
+    background-attachment: fixed;
 }
 .my-portfolio{
     margin: 0;
@@ -164,7 +184,8 @@ button:hover {
     width: 100%;
     height:100vh;
     color: white;
-    background-image: url('Mountains2.jpg');
+    background-image: url("Mountains2.jpg");
+    background-attachment: fixed;
     background-size: cover;
 }
 .hello{
@@ -180,13 +201,14 @@ button:hover {
     margin-bottom: 20px;
 }
 .title{
-   background: black;
-   opacity: 0.8;
+   background: #00000073;
+   
    height: 85%;
-   margin: 0 20px ;
-   border-radius: 5px;
-   padding: 10px 0;
+   margin: auto ;
+   border-radius: 10px;
+   padding: 5px 0;
    display: flex;
+   width: 80%;
    justify-content: center;
    flex-direction: column;
 }
@@ -199,3 +221,117 @@ button:hover {
     margin:0 10px;
     padding: 10px 0;
 }
+
+* {
+    box-sizing: border-box;
+    color: #fff;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana,
+      "sans-serif";
+  }
+  
+  html,
+  body {
+    background: #0e101f;
+    margin: 0;
+    padding: 0;
+  }
+  
+  *:focus {
+    outline: 0;
+  }
+  
+  .wrapper {
+    margin: 100px auto 0;
+    width: 70%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+  }
+  
+  form {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  form * {
+    font-size: 20px;
+    letter-spacing: 0.075em;
+    font-weight: 300;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  form .field {
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  form .field label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #b13e8b, #372056);
+    width: 100%;
+    height: 64px;
+    transition: width 333ms ease-in-out;
+    text-align: center;
+    padding: 18px 0;
+  }
+  
+  form .field input[type="text"],
+  form .field textarea {
+    border: none;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    padding-left: 19.5%;
+    color: #313a3d;
+  }
+  
+  form #msg {
+    height: 64px;
+    resize: none;
+    transition: all 333ms ease-in-out;
+    padding-top: 18px;
+  }
+  form textarea:focus#msg,
+  form textarea:not(:placeholder-shown)#msg {
+    height: 166px;
+  }
+  form input[type="text"]:focus + label,
+  form input[type="text"]:not(:placeholder-shown) + label,
+  form textarea:focus + label,
+  form textarea:not(:placeholder-shown) + label,
+  form .field:hover label {
+    width: 18%;
+  }
+  form input[type="submit"] {
+    background: linear-gradient(90deg, #b13e8b, #812d65);
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    padding: 13px 50px;
+    transition: all 0.3s ease-in-out;
+    align-self: start;
+  }
+  form input[type="submit"]:hover,
+  form input[type="submit"]:focus {
+    background: #372056;  
+  }
+
+  .row_2 {
+    display: flex;
+    flex: 33.33%;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .column {
+    padding: 5px;
+  }
